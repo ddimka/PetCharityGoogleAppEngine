@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/petendpoint/v1/20140626140021/java/1.16.0-rc/work.com-petendpoint-v1-20140626140021-java-1.16.0-rc-sources.jar", 
-      "path": "work.com-petendpoint-v1-20140626140021-java-1.16.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/petendpoint/v1/20140627073833/java/1.16.0-rc/work.com-petendpoint-v1-20140627073833-java-1.16.0-rc-sources.jar", 
+      "path": "work.com-petendpoint-v1-20140627073833-java-1.16.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-06-26 14:00"
+      "timestamp": "2014-06-27 07:38"
     }, 
     {
-      "path": "work.com-petendpoint-v1-20140626140021-java-1.16.0-rc.jar.properties", 
+      "path": "work.com-petendpoint-v1-20140627073833-java-1.16.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -702,5 +702,5 @@
   "packagePath": "petcharity", 
   "language_version": "1.16.0-rc", 
   "id": "petendpoint:v1", 
-  "revision": 20140626140021
+  "revision": 20140627073833
 }
