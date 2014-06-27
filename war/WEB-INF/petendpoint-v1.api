@@ -1,0 +1,211 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://ardent-rarity-610.appspot.com/_ah/api",
+  "name" : "petendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://ardent-rarity-610.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "work.com",
+  "ownerName" : "work.com",
+  "packagePath" : "petcharity",
+  "methods" : {
+    "petendpoint.updatePet" : {
+      "path" : "pet",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.PetEndpoint.updatePet",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "petendpoint.removePet" : {
+      "path" : "pet/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.PetEndpoint.removePet",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "petendpoint.insertPet" : {
+      "path" : "pet",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.PetEndpoint.insertPet",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "petendpoint.getPet" : {
+      "path" : "pet/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.PetEndpoint.getPet",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "petendpoint.listPet" : {
+      "path" : "pet",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.PetEndpoint.listPet",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Pet" : {
+        "id" : "Pet",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "kalbiya" : {
+            "type" : "string"
+          },
+          "moneyNeeded" : {
+            "type" : "string"
+          },
+          "petName" : {
+            "type" : "string"
+          },
+          "deathDate" : {
+            "type" : "string"
+          },
+          "moneyHave" : {
+            "type" : "string"
+          },
+          "picture" : {
+            "type" : "string",
+            "format" : "byte"
+          }
+        }
+      },
+      "CollectionResponse_Pet" : {
+        "id" : "CollectionResponse_Pet",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Pet"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.work.petcharity.PetEndpoint.updatePet" : {
+        "request" : {
+          "$ref" : "Pet"
+        },
+        "response" : {
+          "$ref" : "Pet"
+        }
+      },
+      "com.work.petcharity.PetEndpoint.removePet" : {
+      },
+      "com.work.petcharity.PetEndpoint.insertPet" : {
+        "request" : {
+          "$ref" : "Pet"
+        },
+        "response" : {
+          "$ref" : "Pet"
+        }
+      },
+      "com.work.petcharity.PetEndpoint.getPet" : {
+        "response" : {
+          "$ref" : "Pet"
+        }
+      },
+      "com.work.petcharity.PetEndpoint.listPet" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Pet"
+        }
+      }
+    }
+  }
+}
