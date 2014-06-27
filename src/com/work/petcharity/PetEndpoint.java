@@ -103,7 +103,7 @@ public class PetEndpoint{
 			
 		PersistenceManager mgr = getPersistenceManager();
 		try {
-			if (pet.getId() != null) {
+			if (pet.getId() != null || pet.getId() != 0) {
 				if (containsPet(pet)) {
 					throw new EntityExistsException("Object already exists");
 				}
