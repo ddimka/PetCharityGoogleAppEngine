@@ -64,6 +64,22 @@
         "body" : "empty"
       }
     },
+    "petendpoint.insertPet" : {
+      "path" : "pet",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.PetEndpoint.insertPet",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
     "petendpoint.getPet" : {
       "path" : "pet/{id}",
       "httpMethod" : "GET",
@@ -80,22 +96,6 @@
           }
         },
         "body" : "empty"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
-    "petendpoint.insertPet" : {
-      "path" : "pet",
-      "httpMethod" : "POST",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.work.petcharity.PetEndpoint.insertPet",
-      "request" : {
-        "body" : "autoTemplate(backendRequest)",
-        "bodyName" : "resource"
       },
       "response" : {
         "body" : "autoTemplate(backendResponse)"
@@ -137,10 +137,10 @@
             "type" : "string",
             "format" : "int64"
           },
-          "description" : {
+          "kalbiya" : {
             "type" : "string"
           },
-          "kalbiya" : {
+          "description" : {
             "type" : "string"
           },
           "petName" : {
@@ -152,12 +152,12 @@
           "moneyNeeded" : {
             "type" : "string"
           },
-          "moneyHave" : {
-            "type" : "string"
-          },
           "picture" : {
             "type" : "string",
             "format" : "byte"
+          },
+          "moneyHave" : {
+            "type" : "string"
           }
         }
       },
@@ -188,15 +188,15 @@
       },
       "com.work.petcharity.PetEndpoint.removePet" : {
       },
-      "com.work.petcharity.PetEndpoint.getPet" : {
-        "response" : {
-          "$ref" : "Pet"
-        }
-      },
       "com.work.petcharity.PetEndpoint.insertPet" : {
         "request" : {
           "$ref" : "Pet"
         },
+        "response" : {
+          "$ref" : "Pet"
+        }
+      },
+      "com.work.petcharity.PetEndpoint.getPet" : {
         "response" : {
           "$ref" : "Pet"
         }

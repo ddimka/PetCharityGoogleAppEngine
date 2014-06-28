@@ -103,7 +103,7 @@ public class PetEndpoint{
 			
 		PersistenceManager mgr = getPersistenceManager();
 		try {
-			if (pet.getId() != null || pet.getId() != 0) {
+			if (pet.getId() != null) { // || pet.getId() != 0
 				if (containsPet(pet)) {
 					throw new EntityExistsException("Object already exists");
 				}
@@ -145,7 +145,7 @@ public class PetEndpoint{
 	 */
 	@ApiMethod(name = "removePet")
 	
-	public void removePet(@Named("id") Long id, User user) {
+	public void removePet(@Named("id") Long id) {
 		PersistenceManager mgr = getPersistenceManager();
 		try {
 			Pet pet = mgr.getObjectById(Pet.class, id);
