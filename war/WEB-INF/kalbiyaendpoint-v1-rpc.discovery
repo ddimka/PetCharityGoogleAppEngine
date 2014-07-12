@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"p_qcyFV0KQVqSB1Aq3pqmPu-2MY/ZsKFVkp1OJ1cUsIVcADodQePzuo\"",
+ "etag": "\"p_qcyFV0KQVqSB1Aq3pqmPu-2MY/VIrvh3DwWG-NUDMKZeXURFw3UxI\"",
  "discoveryVersion": "v1",
  "id": "kalbiyaendpoint:v1",
  "name": "kalbiyaendpoint",
@@ -14,8 +14,8 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rpc",
- "rootUrl": "https://ardent-rarity-610.appspot.com/_ah/api/",
- "rpcUrl": "https://ardent-rarity-610.appspot.com/_ah/api/rpc",
+ "rootUrl": "https://petcharity-admin-app-32.appspot.com/_ah/api/",
+ "rpcUrl": "https://petcharity-admin-app-32.appspot.com/_ah/api/rpc",
  "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {

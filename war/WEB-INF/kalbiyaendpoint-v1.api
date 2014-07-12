@@ -1,12 +1,12 @@
 {
   "extends" : "thirdParty.api",
   "abstract" : false,
-  "root" : "https://ardent-rarity-610.appspot.com/_ah/api",
+  "root" : "https://petcharity-admin-app-32.appspot.com/_ah/api",
   "name" : "kalbiyaendpoint",
   "version" : "v1",
   "defaultVersion" : false,
   "adapter" : {
-    "bns" : "https://ardent-rarity-610.appspot.com/_ah/spi",
+    "bns" : "https://petcharity-admin-app-32.appspot.com/_ah/spi",
     "deadline" : 65.0,
     "type" : "lily"
   },
@@ -43,6 +43,22 @@
         "body" : "autoTemplate(backendResponse)"
       }
     },
+    "kalbiyaendpoint.insertKalbiya" : {
+      "path" : "kalbiya",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.work.petcharity.KalbiyaEndpoint.insertKalbiya",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
     "kalbiyaendpoint.listKalbiya" : {
       "path" : "kalbiya",
       "httpMethod" : "GET",
@@ -63,22 +79,6 @@
           }
         },
         "body" : "empty"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
-    "kalbiyaendpoint.insertKalbiya" : {
-      "path" : "kalbiya",
-      "httpMethod" : "POST",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.work.petcharity.KalbiyaEndpoint.insertKalbiya",
-      "request" : {
-        "body" : "autoTemplate(backendRequest)",
-        "bodyName" : "resource"
       },
       "response" : {
         "body" : "autoTemplate(backendResponse)"
@@ -179,17 +179,17 @@
           "$ref" : "Kalbiya"
         }
       },
-      "com.work.petcharity.KalbiyaEndpoint.listKalbiya" : {
-        "response" : {
-          "$ref" : "CollectionResponse_Kalbiya"
-        }
-      },
       "com.work.petcharity.KalbiyaEndpoint.insertKalbiya" : {
         "request" : {
           "$ref" : "Kalbiya"
         },
         "response" : {
           "$ref" : "Kalbiya"
+        }
+      },
+      "com.work.petcharity.KalbiyaEndpoint.listKalbiya" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Kalbiya"
         }
       },
       "com.work.petcharity.KalbiyaEndpoint.getKalbiya" : {

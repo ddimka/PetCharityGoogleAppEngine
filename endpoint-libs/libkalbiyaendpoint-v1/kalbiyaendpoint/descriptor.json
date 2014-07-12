@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/kalbiyaendpoint/v1/20140628102735/java/1.16.0-rc/work.com-kalbiyaendpoint-v1-20140628102735-java-1.16.0-rc-sources.jar", 
-      "path": "work.com-kalbiyaendpoint-v1-20140628102735-java-1.16.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/kalbiyaendpoint/v1/20140712074326/java/1.16.0-rc/work.com-kalbiyaendpoint-v1-20140712074326-java-1.16.0-rc-sources.jar", 
+      "path": "work.com-kalbiyaendpoint-v1-20140712074326-java-1.16.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-06-28 10:27"
+      "timestamp": "2014-07-12 07:43"
     }, 
     {
-      "path": "work.com-kalbiyaendpoint-v1-20140628102735-java-1.16.0-rc.jar.properties", 
+      "path": "work.com-kalbiyaendpoint-v1-20140712074326-java-1.16.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -702,5 +702,5 @@
   "packagePath": "petcharity", 
   "language_version": "1.16.0-rc", 
   "id": "kalbiyaendpoint:v1", 
-  "revision": 20140628102735
+  "revision": 20140712074326
 }

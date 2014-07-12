@@ -1,0 +1,201 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"p_qcyFV0KQVqSB1Aq3pqmPu-2MY/Z5zIsy4_jxC7H35jFoBi7PALM1U\"",
+ "discoveryVersion": "v1",
+ "id": "paymentsendpoint:v1",
+ "name": "paymentsendpoint",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "work.com",
+ "ownerName": "work.com",
+ "packagePath": "petcharity",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://petcharity-admin-app-32.appspot.com/_ah/api/",
+ "rpcUrl": "https://petcharity-admin-app-32.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CollectionResponse_Payments": {
+   "id": "CollectionResponse_Payments",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Payments"
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Payments": {
+   "id": "Payments",
+   "type": "object",
+   "properties": {
+    "kalbiya": {
+     "type": "string"
+    },
+    "money": {
+     "type": "string"
+    },
+    "paymentId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "petName": {
+     "type": "string"
+    }
+   }
+  }
+ },
+ "methods": {
+  "paymentsendpoint.getPayments": {
+   "id": "paymentsendpoint.getPayments",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "Payments"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "paymentsendpoint.insertPayments": {
+   "id": "paymentsendpoint.insertPayments",
+   "parameters": {
+    "resource": {
+     "$ref": "Payments"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Payments"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "paymentsendpoint.listPayments": {
+   "id": "paymentsendpoint.listPayments",
+   "allowGet": true,
+   "parameters": {
+    "cursor": {
+     "type": "string"
+    },
+    "limit": {
+     "type": "integer",
+     "format": "int32"
+    }
+   },
+   "returns": {
+    "$ref": "CollectionResponse_Payments"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "paymentsendpoint.removePayments": {
+   "id": "paymentsendpoint.removePayments",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "paymentsendpoint.updatePayments": {
+   "id": "paymentsendpoint.updatePayments",
+   "parameters": {
+    "resource": {
+     "$ref": "Payments"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Payments"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}

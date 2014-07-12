@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"p_qcyFV0KQVqSB1Aq3pqmPu-2MY/W3l9E-a0ZkMw2VajmQw0kEJggms\"",
+ "etag": "\"p_qcyFV0KQVqSB1Aq3pqmPu-2MY/etzMKIMBeniNY4Kyu7TF9Sya3j4\"",
  "discoveryVersion": "v1",
  "id": "petendpoint:v1",
  "name": "petendpoint",
@@ -14,9 +14,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://ardent-rarity-610.appspot.com/_ah/api/petendpoint/v1/",
+ "baseUrl": "https://petcharity-admin-app-32.appspot.com/_ah/api/petendpoint/v1/",
  "basePath": "/_ah/api/petendpoint/v1/",
- "rootUrl": "https://ardent-rarity-610.appspot.com/_ah/api/",
+ "rootUrl": "https://petcharity-admin-app-32.appspot.com/_ah/api/",
  "servicePath": "petendpoint/v1/",
  "batchPath": "batch",
  "parameters": {
